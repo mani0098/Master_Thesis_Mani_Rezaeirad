@@ -1,0 +1,159 @@
+\usepackage{graphics}
+\usepackage{tabularx}
+\usepackage{blindtext}
+\usepackage[a4paper,pdftex,hmargin=0.75in,vmargin={1.1in,0.6in},head=75pt,foot=45pt, left=2.5cm, right=2.5cm, includefoot, footskip=60pt]{geometry}
+
+
+\makeatletter
+\newcommand\frontmatter{%
+    \cleardoublepage
+  %\@mainmatterfalse
+  \pagenumbering{roman}}
+\newcommand\mainmatter{%
+    \cleardoublepage
+ % \@mainmattertrue
+  \pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+ % \@mainmatterfalse
+  }
+\makeatother
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+%\renewcommand*\ShowFrameColor{\color{red}}
+%\usepackage[square,numbers, sort&compress]{natbib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{comment}
+\usepackage{etoolbox}
+\usepackage{supertabular}
+\usepackage{graphicx}
+\usepackage{color,soul}
+\usepackage{booktabs}
+\usepackage{makecell}
+\renewcommand\theadfont{\bfseries}
+%\usepackage{cite}
+\usepackage{verbatim}
+\usepackage{paralist}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{hvfloat}
+\usepackage{enumitem}
+\usepackage{comment}
+\usepackage{chngpage}
+\usepackage[bottom]{footmisc}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{lipsum}
+\usepackage{afterpage}
+%\usepackage{svg}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{wallpaper}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{rotating}
+\usepackage[pagestyles]{titlesec}
+\usepackage{parskip}
+\usepackage{listings}
+\lstset{language=C,breaklines=true}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[justification=centering, style=base]{caption}
+\usepackage{fontenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{mathptmx}
+\usepackage{array}
+\usepackage{relsize}
+\usepackage{subcaption}
+\captionsetup[subfigure]{textfont=normalfont,singlelinecheck=off,justification=centerfirst, format=hang}
+\usepackage{tcolorbox}
+\usepackage{lscape}
+\usepackage{lastpage}
+\usepackage[natbib=true, style=numeric-comp, maxbibnames=99, sorting=none, url=false, doi=false, isbn=false]{biblatex}
+\AtEveryBibitem{
+    \clearfield{urlyear}
+    \clearfield{urlmonth}
+    \clearfield{note}
+    \clearfield{eprint}
+    \clearfield{url}
+    \clearfield{titleaddon}
+}
+\usepackage{acro}
+\setlength{\headsep}{1.5cm}
+\usepackage[toc,page]{appendix}
+\usepackage[nottoc]{tocbibind} % for show references in toc
+\usepackage{pgfgantt}
+\frenchspacing
+%\usepackage{showframe}% for show page layout
+% \usepackage{afterpage}
+% \newcommand\myemptypage{
+%     \null
+%     \thispagestyle{empty}
+%     \addtocounter{page}{-1}
+%     \newpage
+%     }
+    
+%%%%%%%%%%%%%%%%%
+\usepackage[final]{pdfpages}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyhf{}
+\lhead{\includegraphics[height=1.2cm]{fig/UPC.png}}
+\rhead{\includegraphics[height=1.3cm]{fig/Telecos.png}}
+\fancyfoot[C]{\thepage{}}
+%\fancypagestyle{plain}{%
+%\renewcommand{\footrulewidth}{0.4pt}
+%\futurelet\TMPfootrule\def\footrule{{\color{upcorange}\TMPfootrule}}
+%\futurelet\TMPfootrule\def\footrule{{\color{gray!80}\TMPfootrule}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+%\color{upcorange}\leaders\hrule height \headrulewidth\hfill}}
+\color{gray!80}\leaders\hrule height \headrulewidth\hfill}}
+\usepackage[hypertexnames=false]{hyperref}
+\hypersetup{
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+\usepackage[capitalise]{cleveref}
+% \newcommand{\crefrangeconjunction}{--}
+\crefrangelabelformat{equation}%
+{(#3#1#4--#5\crefstripprefix{#1}{#2}#6)}
+\crefrangelabelformat{subequation}%
+{(#3#1#4--#5\crefstripprefix{#1}{#2}#6)}
+\crefrangelabelformat{table}%
+{(#3#1#4--#5\crefstripprefix{#1}{#2}#6)}
+\crefrangelabelformat{figure}%
+{(#3#1#4--#5\crefstripprefix{#1}{#2}#6)}
+% \crefrangelabelformat{subfigure}%
+% {(#3#1#4--#5\crefstripprefix{#1}{#2}#6)}
+
+\bibliography{TexFiles/mylib}
+%\addbibresource{TexFiles/mylib.bib}
+\renewcommand*{\bibfont}{\small}
+\setlength{\bibitemsep}{9pt plus 0.3ex}
+
+\usepackage[acronym,toc,indexonlyfirst]{glossaries}
+\makeglossaries
+
+

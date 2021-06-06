@@ -1,0 +1,7 @@
+\chapter{Conclusion}\label{chap:conclusion}
+
+\acrfull{ML} in medicine has been around for years, with the aim of medical treatment. This thesis focuses on the decision support aspect of \acrshort{ML} to present a model that can precisely predict mortality by means of the utilization of some relevant features. \
+
+{\hskip 1em} \acrfull{eICU-CRD} is chosen as our study resource. A database, which comprises 31 tables and over 457 million rows of measurements. Despite performing a thorough analysis of its demo version, only four tables, \textit{apachePredVar}, \textit{infusionDrug}, \textit{patient}, and \textit{lab}, were selected to build our cohort due to some hardware limitations. Ultimately, a 59190-row dataset including age, gender, weight, glucose values, lactate values, diabetes, and mortality was created for further implementation. \
+
+{\hskip 1em} Seven \acrlong{ML} algorithms have been applied to our dataset, and the results of each have been extracted. Finally, it is shown that regarding criteria such as accuracy, \acrshort{AUC} for both ROC and \textsc{Precision-Recall}, and Cohen's Kappa, \acrfull{XGB} outperforms the other. All the algorithms were also discussed in terms of Training Computational Complexity, and it can be seen that \acrshort{SVM} has the longest running time by far. \

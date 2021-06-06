@@ -1,0 +1,10 @@
+\chapter{Future Work}\label{chap:future}
+
+In this thesis, mortality prediction was studied based on patients' glucose and lactate values. However, there is a huge potential in medicine to analyze clinically ill patients from different perspectives, such as:
+
+\begin{itemize}
+    \item \textbf{Multi-class:} One aspect of analyzing clinical databases like \acrshort{eICU-CRD} is to consider more than a single binary outcome (in our work, mortality). Adding more output features increases the dimension and, therefore, the complexity of the cohort analysis, and perhaps, the need for utilizing Deep Learning rises. 
+    \item \textbf{Time:} One of the most interesting features to be added to our study is time. Considering the time allows us to better track a patient's situation, improved estimate when they need medication or operation, better follow and study the vital signals trend, and better predict the death's probable time. Take into account that most clinical databases use irregular time series as in \acrshort{eICU-CRD}.
+    \item \textbf{Real-time implementation:} Once the implementation has been tested and approved, it can be used in real-time databases to make the predictions practical, like what is currently happening in \textit{Telemedicine}.
+    \item \textbf{\acrlong{NLP}:} There are tables in \acrshort{eICU-CRD} like the \textit{nurseCharting} table which consists of nurse-entered information that can give much information about the patient's disease. Nevertheless, in order to extract them, \acrshort{NLP} is needed.
+    \end{itemize}

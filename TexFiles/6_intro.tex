@@ -1,0 +1,54 @@
+\chapter{Introduction}\label{chap:intro}
+
+\section{Problem Description and Objectives}
+
+\acrfull{AI} is seeping its way into our lives. We can see its influence on the way we live, work, and entertain. There is a vast range of applications AI is used nowadays. From personal assistants like Alexa, and Siri to autonomous vehicles or video games, are just a few examples of \acrlong{AI} in use today.  \
+
+{\hskip 1em} In recent years, one of the industries that has benefited significantly  from AI is healthcare. Being applied in healthcare can help doctors diagnose disease faster and provide a method for predicting the need to perform precautionary measures to the avoid aggravation of a patient's condition. In this regard, continuous monitoring of clinical data is needed. This can be done via critical care databases that can also be used in observational research and predictive model development. These databases provide the opportunity to advance this field into a new era \cite{cosgriff_critical_2019}. \
+
+{\hskip 1em} The \acrfull{MIMIC} database, released in 2010, was the first of this kind \cite{saeed_multiparameter_2011}. The third edition of this database, \acrfull{MIMIC-III}, maintained and developed by \acrshort{MIT} \acrfull{LCP}, making it possible to be investigated by novel clinical relationships and to be developed by new patient monitoring algorithms \cite{johnson_mimic-iii_2016}. However, most of its data needs to be extracted from the text format. \
+
+{\hskip 1em} Lately, upon the success of \acrshort{MIMIC-III}, the \acrfull{eICU-CRD}, a publicly available database, was published in 2019. It is a developed version of the \acrshort{eICU} program, a telehealth system collected by Philips Healthcare, partnered with \acrshort{LCP} at \acrshort{MIT}. In \cite{pollard_eicu_2018}, Pollard et al. described eICU as a multi-center \acrshort{ICU} database with 200,859 ICUs admissions monitored across the United States. The nature of its data supports a number of applications, such as decision support tools and machine learning algorithms development. That is why eICU is chosen as the primary resource of our study in this project. \
+
+{\hskip 1em} This dissertation is part of an ongoing Ph.D. thesis by Eline Stenwig, a Ph.D. candidate at the Department of Circulation and Medical Imaging at \acrshort{NTNU}. While she supposes to present a thorough model of mortality prediction using almost all the 31 tables included in \acrshort{eICU}, this thesis focuses on the part regarding the effect of glucose and lactate on mortality. \ 
+
+\section{Thesis Contributions}
+This thesis contributes to the following items: \
+
+\begin{itemize}
+    \item Better understanding of the eICU database and its structure, how the contained tables are related to each other, and what parameters are the proper ones for our project.
+    \item Demonstration of a suitable \acrlong{ML} algorithm regarding our aim and considered features.
+    \item Conducting a comprehensive assessment of each applied algorithm and comparing them in the end.
+\end{itemize}
+
+\section{Work Plan}
+Figure \ref{fig:gantt} shows the Gantt chart in detail with the three main phases of the thesis. Even though the \acrshort{eICU-CRD} is an openly available database, before requesting access to the main version, one should complete the \acrshort{CITI} “Data or Specimens Only Research” course due to working with patient data, which must meet the provisions of the US \acrfull{HIPAA}. Having no prior knowledge in Python, an online course, "Python for Data Science and AI," has been taken and passed while reviewing the thesis subject's literature. On the next step, the learned knowledge was put into practice to preprocess the database, finding the important features of the desired purpose and several \acrshort{ML} algorithms implementations. Collecting all the needed documents and writing the thesis down is the level that is underway. It should be mentioned that the work presented in this thesis will form the basis for a scientific paper. \
+
+\section{Thesis Structure}
+Chapter \ref{chap:intro} includes the problem description, objectives, and contributions of the thesis alongside its work plan. \
+
+Chapter \ref{chap:sotart} goes through relevant literature on the topic and outline the usage of \acrshort{ML} in medicine, chronologically. The applicability of decision support and prediction is given, and the conducted surveys on the influence of glucose and lactate are introduced before some eICU-cited articles are described. \
+
+Chapter \ref{chap:dataset} elaborates on the database which forms the basis for the work in this thesis. It comprises a detailed explanation about the confronted problems of the database and their possible solutions. \
+
+In chapter \ref{chap:method}, the approach to reach the final prediction is discussed. This discussion consists of the chosen \acrshort{ML} algorithms and an optimization via their hyperparameters.\
+
+The implemented \acrshort{ML} algorithms' results are discussed in chapter \ref{chap:results}, followed by their comparison based on \acrshort{AUC} and complexity.\
+
+Chapter \ref{chap:conclusion} contains concluding remarks. \
+
+Finally, chapter \ref{chap:future} makes some suggestions for further work.
+
+\label{ssec:gantt}
+\begin{figure}[H]
+\rotatebox[origin=c]{-90}{%
+\begin{minipage}[c][14.85cm][c]{1,5\textwidth}
+\centering
+    %\includegraphics[width=13cm]{img/diagram_gantt.png}
+    %\input{TexFiles/gantt}
+    \resizebox{1\textwidth}{!}{\input{TexFiles/gantt}}
+    \caption[Thesis' Gantt chart]{Gantt chart of the thesis}
+    \label{fig:gantt}
+\end{minipage}
+}
+\end{figure}

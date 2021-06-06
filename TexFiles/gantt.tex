@@ -1,0 +1,60 @@
+%\begin{rotate}{270}
+\begin{ganttchart}[y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,hgrid,
+title height=1,
+today=34,%
+today offset=.5,%
+today label=Now,%
+bar/.style={draw,fill=cyan},
+bar incomplete/.append style={fill=yellow!50},
+bar height=0.7]{1}{48}
+
+ % dies
+ \gantttitle{Phases of the Project}{48} \\
+ %\gantttitle{2019}{15}
+ \gantttitle{2020}{48} \\
+ \gantttitle{January}{4}
+ \gantttitle{February}{4}
+ \gantttitle{March}{4}
+ \gantttitle{April}{4}
+ \gantttitle{May}{4}
+ \gantttitle{June}{4}
+ \gantttitle{July}{4}
+ \gantttitle{August}{4}
+ \gantttitle{September}{4}
+ \gantttitle{October}{4}
+ \gantttitle{November}{4}
+ \gantttitle{December}{4}\\
+ 
+ % caixes elem0 .. elem10 
+ \ganttgroup[inline=false]{Planning}{4}{8}\\
+ \ganttbar[progress=100]{Access to DB}{5}{7} \\
+ \ganttbar[progress=100]{Python Course}{6}{10} \\
+ \ganttbar[progress=100]{Reading Articles}{7}{9} \\
+ \ganttgroup[inline=false]{Process}{9}{37}\\
+ \ganttbar[progress=100]{DB Preprocessing}{10}{24} \\
+ \ganttbar[progress=100]{ML Implementation}{25}{31} \\
+ \ganttbar[progress=100]{Code Optimization}{31}{33} \\
+ \ganttbar[progress=40]{Writing Thesis}{33}{37} \\
+ \ganttgroup[inline=false]{Future}{38}{44}\\
+ \ganttbar[progress=20]{Submit a Paper}{40}{43} \\
+ \ganttbar[progress=5]{Multi-class Prediction}{41}{43} \\
+
+ 
+ % relacions
+ \ganttlink{elem1}{elem5}
+ \ganttlink{elem2}{elem5}
+ \ganttlink{elem3}{elem5}
+ \ganttlink{elem3}{elem6}
+ \ganttlink{elem5}{elem6}
+ \ganttlink{elem5}{elem7}
+ \ganttlink{elem6}{elem7}
+ \ganttlink{elem3}{elem8}
+ \ganttlink{elem8}{elem10}
+ \ganttlink{elem6}{elem10}
+ \ganttlink{elem8}{elem11}
+ \ganttlink{elem6}{elem7}
+ 
+\end{ganttchart}
+%\end{rotate}
